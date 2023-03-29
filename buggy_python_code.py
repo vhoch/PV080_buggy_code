@@ -26,6 +26,7 @@ def print_nametag(format_string, person):
 def fetch_website(urllib_version, url):
     # Import the requested version (2 or 3) of urllib
     if (urllib_version.isnumeric()):
+        urllib_version = int(urllib_version)
         exec(f"import urllib{urllib_version} as urllib", globals())
     else:
         return
